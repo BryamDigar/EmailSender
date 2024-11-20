@@ -24,12 +24,5 @@ EXPOSE 8080
 # Copiar el archivo .jar generado desde la fase de construcción
 COPY --from=build /build/libs/email-0.0.1-SNAPSHOT.jar app.jar
 
-# Configurar variables de entorno
-ENV EMAIL=${EMAIL}
-ENV PASSWORD_EMAIL=${PASSWORD_EMAIL}
-ENV RABBITMQ_HOST=${RABBITMQ_HOST}
-ENV RABBITMQ_USER=${RABBITMQ_USER}
-ENV RABBITMQ_PASSWORD=${RABBITMQ_PASSWORD}
-
 # Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "app.jar"]

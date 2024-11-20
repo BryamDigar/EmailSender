@@ -62,9 +62,3 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          secrets: |
-            EMAIL=${{ secrets.EMAIL }}
-            PASSWORD_EMAIL=${{ secrets.PASSWORD_EMAIL }}
-            RABBITMQ_HOST=${{ secrets.RABBITMQ_HOST }}
-            RABBITMQ_USER=${{ secrets.RABBITMQ_USER }}
-            RABBITMQ_PASSWORD=${{ secrets.RABBITMQ_PASSWORD }}
