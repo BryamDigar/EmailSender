@@ -30,7 +30,7 @@ public class EmailService {
             "<img src='cid:logoImage' width='250' height='250'>" +
             "</body>" +
             "</html>",
-            emailDTO.nombre(), emailDTO.monto(), emailDTO.cedula(), emailDTO.saldoAnterior() + emailDTO.monto()
+            emailDTO.nombre(), emailDTO.monto(), emailDTO.cedula(), emailDTO.saldoAnterior()
         );
 
         MimeMessage mimeMessage = mailSender.createMimeMessage();
